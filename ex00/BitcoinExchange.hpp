@@ -6,7 +6,7 @@
 /*   By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:17:45 by asolano-          #+#    #+#             */
-/*   Updated: 2023/11/29 11:21:58 by asolano-         ###   ########.fr       */
+/*   Updated: 2023/11/30 11:46:40 by asolano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <ctime>
 #include <map>
 class  BitcoinExchange
 {
@@ -27,8 +29,9 @@ class  BitcoinExchange
 		BitcoinExchange &operator=(const BitcoinExchange &copy);
 		~BitcoinExchange();
 		
-		void parseFile(std::string infile);
-		int checkInput(std::string line);
+		int parseFile(std::string infile);
+		int checkInput(std::string line) const;
+		int printError(int i, std::string s) const;
 };
 
 
