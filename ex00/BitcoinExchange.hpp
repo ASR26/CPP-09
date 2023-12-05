@@ -6,7 +6,7 @@
 /*   By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:17:45 by asolano-          #+#    #+#             */
-/*   Updated: 2023/12/04 11:37:03 by asolano-         ###   ########.fr       */
+/*   Updated: 2023/12/05 09:22:39 by asolano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class  BitcoinExchange
 {
 	private:
 		std::map<time_t, double> db;
-		std::map<time_t, double> input;
 	public:
 		BitcoinExchange();
 		BitcoinExchange(std::string infile);
@@ -37,6 +36,7 @@ class  BitcoinExchange
 		int checkInput(std::string line) const;
 		int checkDatabase(std::string line) const;
 		int printError(int i, std::string s) const;
+		void printOutput(std::tm date, double rate);
 };
 
 
