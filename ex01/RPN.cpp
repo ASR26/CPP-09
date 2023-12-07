@@ -6,7 +6,7 @@
 /*   By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:45:32 by asolano-          #+#    #+#             */
-/*   Updated: 2023/12/07 09:12:52 by asolano-         ###   ########.fr       */
+/*   Updated: 2023/12/07 10:03:13 by asolano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ RPN::RPN(const RPN &copy)
 RPN &RPN::operator=(const RPN &copy)
 {
 	st = copy.st;
+	return *this;
 }
 
 RPN::~RPN()

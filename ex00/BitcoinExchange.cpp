@@ -6,24 +6,35 @@
 /*   By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 10:17:41 by asolano-          #+#    #+#             */
-/*   Updated: 2023/12/05 10:20:31 by asolano-         ###   ########.fr       */
+/*   Updated: 2023/12/07 09:59:59 by asolano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-BitcoinExchange:: BitcoinExchange()
+BitcoinExchange::BitcoinExchange()
 {
 }
 
-BitcoinExchange:: BitcoinExchange(std::string infile)
+BitcoinExchange::BitcoinExchange(std::string infile)
 {
 
 	this->parseDatabase();
 	this->parseFile(infile);
 }
 
-BitcoinExchange::~ BitcoinExchange()
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &copy)
+{
+	db = copy.db;
+}
+
+BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &copy)
+{
+	db = copy.db;
+	return *this;
+}
+
+BitcoinExchange::~BitcoinExchange()
 {
 }
 
@@ -248,8 +259,3 @@ int	BitcoinExchange::printError(int i, std::string s) const
 	return 1;
 }
 
-/* if (line.find_first_of(" | ") != line.npos || line.find_first_of(" | ") == line.find_last_of(" | "))
-		{
-			date = line.substr(0, line.find_first_of(" | "));
-			std::cout << date << std::endl;
-		} */
