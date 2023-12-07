@@ -6,7 +6,7 @@
 /*   By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:45:32 by asolano-          #+#    #+#             */
-/*   Updated: 2023/12/07 09:08:35 by asolano-         ###   ########.fr       */
+/*   Updated: 2023/12/07 09:12:52 by asolano-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,16 @@ float	RPN::operate(char c, float a, float b)
 			throw std::runtime_error("Error - error during operation");
 			break;
 	}
+}
+
+RPN::RPN(const RPN &copy)
+{
+	st = copy.st;
+}
+
+RPN &RPN::operator=(const RPN &copy)
+{
+	st = copy.st;
 }
 
 RPN::~RPN()
