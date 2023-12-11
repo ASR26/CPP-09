@@ -6,7 +6,7 @@
 #    By: asolano- <asolano-@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 13:24:24 by asolano-          #+#    #+#              #
-#    Updated: 2023/12/07 10:11:47 by asolano-         ###   ########.fr        #
+#    Updated: 2023/12/11 08:33:08 by asolano-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Source files
-SRC = main.cpp RPN.cpp
+SRC = main.cpp PmergeMe.cpp
 
 # Object files
 OBJ = $(SRC:.cpp=.o)
